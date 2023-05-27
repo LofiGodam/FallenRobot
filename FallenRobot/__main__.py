@@ -720,7 +720,7 @@ def main():
         try:
             dispatcher.bot.send_photo(
                 chat_id=f"@{SUPPORT_CHAT}",
-                photo=START_IMG,
+                animation="https://telegra.ph/file/8dea393ddf4fc2e339179.gif",
                 caption=f"""
 ㅤ🥀 {BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ...
 
