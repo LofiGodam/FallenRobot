@@ -6,7 +6,8 @@ import time
 import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
-from FallenRobot.quotstuff.quotapi import Quotly
+from FallenRobot.quotstuff.quotapi import quotly
+
 StartTime = time.time()
 
 # enable logging
