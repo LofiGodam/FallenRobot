@@ -137,7 +137,9 @@ TAGMES = [ " **𝐇𝐞𝐲 𝐁𝐚𝐛𝐲 𝐊𝐚𝐡𝐚 𝐇𝐨🥱** ",
            " **𝐌𝐲 𝐂𝐮𝐭𝐞 𝐎𝐰𝐧𝐞𝐫 [ @EAGLE_BACK ]🥰** ",
            " **𝐊𝐚𝐡𝐚 𝐊𝐡𝐨𝐲𝐞 𝐇𝐨 𝐉𝐚𝐚𝐧😜** ",
            " **𝐆𝐨𝐨𝐝 𝐍8 𝐉𝐢 𝐁𝐡𝐮𝐭 𝐑𝐚𝐭 𝐇𝐨 𝐠𝐲𝐢🥰** ",
-           ]
+           " **𝐃𝐈𝐋𝐋 𝐃𝐎𝐆𝐄 𝐘𝐀𝐀 𝐊𝐈𝐃𝐍𝐄𝐘😂** ",
+          ]
+
 
          
 
@@ -164,10 +166,10 @@ async def mentionall(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("𝐎𝐧𝐥𝐲 𝐀𝐝𝐦𝐢𝐧 𝐂𝐚𝐧 𝐌𝐞𝐧𝐭𝐢𝐨𝐧 𝐓𝐨 𝐀𝐥𝐥 𝐁𝐚𝐛𝐲...")
+        return await event.respond("ᴏɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ ᴍᴇɴᴛɪᴏɴ ʙᴀʙʏ...")
 
     if event.pattern_match.group(1) and event.is_reply:
-        return await event.respond("/tagall hello 👈 𝐓𝐲𝐩𝐞 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬 𝐍𝐞𝐱𝐭 𝐓𝐢𝐦𝐞 𝐎𝐤 𝐅𝐨𝐫 𝐓𝐚𝐠𝐠𝐢𝐧𝐠..")
+        return await event.respond("/tagall hello 👈 ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs ɴᴇxᴛ ᴛɪᴍᴇ ᴏᴋ ғᴏʀ ᴛᴀɢɢɪɴɢ..")
     elif event.pattern_match.group(1):
         mode = "text_on_cmd"
         msg = event.pattern_match.group(1)
@@ -176,11 +178,11 @@ async def mentionall(event):
         msg = await event.get_reply_message()
         if msg == None:
             return await event.respond(
-                "/tagall hii 👈 𝐓𝐲𝐩𝐞 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬 𝐎𝐫 𝐑𝐞𝐩𝐥𝐲 𝐀𝐧𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞..."
+                "/tagall hii 👈 ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs ᴏʀ ʀᴇᴘʟᴀʏ ᴀɴʏ ᴍᴇsᴀᴀɢᴇ..."
             )
     else:
         return await event.respond(
-            "/tagall hii 👈 𝐓𝐲𝐩𝐞 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬 𝐎𝐫 𝐑𝐞𝐩𝐥𝐲 𝐀𝐧𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞..."
+            "/tagall hii 👈 ᴛʏᴘᴇ ʟɪᴋᴇ ᴛʜɪs ᴏʀ ʀᴇᴘʟᴀʏ ᴀɴʏ ᴍᴇsᴀᴀɢᴇ..."
 
         )
 
