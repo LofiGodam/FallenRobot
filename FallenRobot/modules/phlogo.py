@@ -50,7 +50,7 @@ async def ph(event):
 	await tbot.send_file(event.chat_id, stc, reply_to=event.reply_to_msg_id, forcedocument=False)
 	os.remove(stc)
 
-__mod_name__ = "🦥ᴘ-ʜᴜʙ Lᴏɢᴏ🦥"
+__mod_name__ = "ᴘ-ʜᴜʙ Lᴏɢᴏ"
 __help__ = """PᴏʀɴHᴜʙ Lᴏɢᴏ
 ᴜsᴀɢᴇ:
 ⋗ /phlogo <word1> <word2> | Tᴏ ɢᴇɴᴇʀᴀᴛᴇ ʟᴏɢᴏ ᴀs ɪᴍᴀɢᴇ
