@@ -6,6 +6,7 @@ import time
 import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
+from telethon import TelegramClient
 from FallenRobot.quotstuff.quotapi import quotly
 
 StartTime = time.time()
@@ -173,3 +174,13 @@ from FallenRobot.modules.helper_funcs.handlers import (
 tg.RegexHandler = CustomRegexHandler
 tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
+
+
+
+#-------Quote-------
+
+quotly = Quotly()
+
+
+
+
