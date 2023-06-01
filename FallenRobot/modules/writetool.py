@@ -1,51 +1,67 @@
 import requests
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from telegram.ext import CallbackContext
-from telegram.ext.dispatcher import run_async
+from pyrogram import filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from FallenRobot import BOT_NAME, BOT_USERNAME, dispatcher
-from FallenRobot.modules.disable import DisableAbleCommandHandler
-
-
-@run_async
-def handwrite(update: Update, context: CallbackContext):
-    message = update.effective_message
-    if message.reply_to_message:
-        text = message.reply_to_message.text
-    else:
-        text = update.effective_message.text.split(None, 1)[1]
-    m = message.reply_text("Writing the text...")
-    req = requests.get(f"https://api.sdbots.tk/write?text={text}").url
-    message.reply_photo(
-        photo=req,
-        caption=f"""
-Successfully Written Text 💘
-
-✨ **Written By :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
-🥀 **Requested by :** {update.effective_user.first_name}
-❄ **Link :** `{req}`""",
-        parse_mode=ParseMode.MARKDOWN,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("• ᴛᴇʟᴇɢʀᴀᴩʜ •", url=req),
-                ],
-            ]
-        ),
-    )
-    m.delete()
+from FallenRobot import BOT_NAME, BOT_USERNAME
+from FallenRobot import pbot as star
 
 
-__help__ = """
- Writes the given text on white page with a pen 🖊
+@star.on_message(filters.command("write"))
+async def handwrite(_, message: Message):
+    if not message.reply_to_message:
+        text = message.text.split(None, 1)[1]
+        m = await star.send_message(
+            message.chat.id, "`Please wait...,\n\nWriting your text...`"
+        )
+        API = f"https://api.sdbots.tk/write?text={text}"
+        req = requests.get(API).url
+        caption = f"""
+sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
 
-❍ /write <text> *:* Writes the given text.
+✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
+🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
+❄ **ʟɪɴᴋ :** `{req}`
 """
+        await m.delete()
+        await star.send_photo(
+            message.chat.id,
+            photo=req,
+            caption=caption,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("🍁ᴛᴇʟᴇɢʀᴀᴩʜ🍁", url=f"{req}")]]
+            ),
+        )
+    else:
+        lol = message.reply_to_message.text
+        m = await star.send_message(
+            message.chat.id, "`Please wait...,\n\nWriting your text...`"
+        )
+        API = f"https://api.sdbots.tk/write?text={lol}"
+        req = requests.get(API).url
+        caption = f"""
+sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
 
-WRITE_HANDLER = DisableAbleCommandHandler("write", handwrite)
+✨ **ᴡʀɪᴛᴛᴇɴ ʙʏ :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
+🥀 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {message.from_user.mention}
+❄ **ʟɪɴᴋ :** `{req}`
+"""
+        await m.delete()
+        await star.send_photo(
+            message.chat.id,
+            photo=req,
+            caption=caption,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("🥀ᴛᴇʟᴇɢʀᴀᴩʜ🥀", url=f"{req}")]]
+            ),
+        )
 
-dispatcher.add_handler(WRITE_HANDLER)
 
 __mod_name__ = "WʀɪᴛᴇTᴏᴏʟ"
-__command_list__ = ["write"]
-__handlers__ = [WRITE_HANDLER]
+
+__help__ = """
+
+ ᴡʀɪᴛᴇs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴡʜɪᴛᴇ ᴘᴀɢᴇ ᴡɪᴛʜ ᴀ ᴘᴇɴ 🖊
+
+❍ /write <ᴛᴇxᴛ> *:* ᴡʀɪᴛᴇs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
+
+ """
