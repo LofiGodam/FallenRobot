@@ -19,7 +19,7 @@ async def ph(event):
 		p = query.split(" ", 1)[0]
 		h = query.split(" ", 1)[1]
 	except:
-		await event.reply("sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴛʀʏ ɢɪᴠɪɴɢ ᴛᴡᴏ ᴡᴏʀᴅs. ᴇ.ɢ.: `/phlogo star boi`")
+		await event.reply("sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ, ᴛʀʏ ɢɪᴠɪɴɢ ᴛᴡᴏ ᴡᴏʀᴅs. ᴇ.ɢ.: `/phlogo Soja Bro`")
 		return
 	result = generate(f"{p}",f"{h}")
 	pic = "ph.png"
