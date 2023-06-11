@@ -8,7 +8,7 @@ from pyrogram import Client, errors
 from telethon import TelegramClient
 from telethon import TelegramClient
 from FallenRobot.quotstuff.quotapi import Quotly
-
+from FallenRobot import WOLVES, dispatcher sw
 StartTime = time.time()
 
 # enable logging
