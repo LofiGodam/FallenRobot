@@ -1,37 +1,8 @@
-"""
-MIT License
-
-Copyright (c) 2022 ABISHNOI69
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
-# ""DEAR PRO PEOPLE,  DON'T REMOVE & CHANGE THIS LINE
-# TG :- @Abishnoi1m
-#     UPDATE   :- Abishnoi_bots
-#     GITHUB :- ABISHNOI69 ""
 import random
 import threading
 from typing import Union
 
-from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
-from sqlalchemy.sql.sqltypes import BigInteger
+from sqlalchemy import BigInteger, Boolean, Column, Integer, String, UnicodeText
 
 from FallenRobot.modules.helper_funcs.msg_types import Types
 from FallenRobot.modules.sql import BASE, SESSION
@@ -40,12 +11,13 @@ DEFAULT_WELCOME = "Hey {first}, how are you?"
 DEFAULT_GOODBYE = "Nice knowing ya!"
 
 DEFAULT_WELCOME_MESSAGES = [
-    "{first} is here!",  # Discord welcome messages copied
+    "{first} is here!",
     "Ready player {first}",
     "Genos, {first} is here.",
     "A wild {first} appeared.",
     "{first} came in like a Lion!",
     "{first} has joined your party.",
+    "Arre dekho dekho koun aaya\n{first} aaya {first} aaya",
     "{first} just joined. Can I get a heal?",
     "{first} just joined the chat - asdgfhak!",
     "{first} just joined. Everyone, look busy!",
@@ -65,7 +37,7 @@ DEFAULT_WELCOME_MESSAGES = [
     "{first} just showed up. Hold my beer.",
     "Challenger approaching! {first} has appeared!",
     "It's a bird! It's a plane! Nevermind, it's just {first}.",
-    r"It's {first}! Praise the sun! \o/",
+    "It's {first}! Praise the sun! \o/",
     "Never gonna give {first} up. Never gonna let {first} down.",
     "Ha! {first} has joined! You activated my trap card!",
     "Hey! Listen! {first} has joined!",
@@ -81,22 +53,22 @@ DEFAULT_WELCOME_MESSAGES = [
     "Roses are red, violets are blue, {first} joined this chat with you",
     "Welcome {first}, Avoid Punches if you can!",
     "It's a bird! It's a plane! - Nope, its {first}!",
-    "{first} Joined! - Ok.",  # Discord welcome messages end.
+    "{first} Joined! - Ok.",
     "All Hail {first}!",
     "Hi, {first}. Don't lurk, only Villans do that.",
     "{first} has joined the battle bus.",
-    "A new Challenger enters!",  # Tekken
+    "A new Challenger enters!",
     "Ok!",
     "{first} just fell into the chat!",
     "Something just fell from the sky! - oh, its {first}.",
     "{first} Just teleported into the chat!",
-    "Hi, {first}, show me your Hunter License!",  # Hunter Hunter
-    "I'm looking for Garo, oh wait nvm it's {first}.",  # One Punch man s2
+    "Hi, {first}, show me your Hunter License!",
+    "I'm looking for Garo, oh wait nvm it's {first}.",
     "Welcome {first}, leaving is not an option!",
     "Run Forest! ..I mean...{first}.",
-    "{first} do 100 push-ups, 100 sit-ups, 100 squats, and 10km running EVERY SINGLE DAY!!!",  # One Punch ma
-    "Huh?\nDid someone with a disaster level just join?\nOh wait, it's just {first}.",  # One Punch ma
-    "Hey, {first}, ever heard the King Engine?",  # One Punch ma
+    "{first} do 100 push-ups, 100 sit-ups, 100 squats, and 10km running EVERY SINGLE DAY!!!",
+    "Huh?\nDid someone with a disaster level just join?\nOh wait, it's just {first}.",
+    "Hey, {first}, ever heard the King Engine?",
     "Hey, {first}, empty your pockets.",
     "Hey, {first}!, are you strong?",
     "Call the Avengers! - {first} just joined the chat.",
@@ -120,7 +92,7 @@ DEFAULT_WELCOME_MESSAGES = [
     "Everyone stop what you’re doing, We are now in the presence of {first}.",
     "Hey {first}, do you wanna know how I got these scars?",
     "Welcome {first}, drop your weapons and proceed to the spy scanner.",
-    "Stay safe {first}, Keep 3 meters social distances between your messages.",  # Corona memes lmao
+    "Stay safe {first}, Keep 3 meters social distances between your messages.",
     "Hey {first}, Do you know I once One-punched a meteorite?",
     "You’re here now {first}, Resistance is futile",
     "{first} just arrived, the force is strong with this one.",
@@ -139,40 +111,40 @@ DEFAULT_WELCOME_MESSAGES = [
     "Ladies and gentlemen, I give you ...  {first}.",
     "Behold my new evil scheme, the {first}-Inator.",
     "Ah, {first} the Platypus, you're just in time... to be trapped.",
-    "{first} just arrived. Diable Jamble!",  # One Piece Sanji
-    "{first} just arrived. Aschente!",  # No Game No Life
-    "{first} say Aschente to swear by the pledges.",  # No Game No Life
-    "{first} just joined. El Psy congroo!",  # Steins Gate
-    "Irasshaimase {first}!",  # weeabo shit
-    "Hi {first}, what is 1000-7?",  # tokyo ghoul
-    "Come. I don't want to destroy this place",  # hunter x hunter
-    "I... am... Whitebeard!...wait..wrong anime.",  # one Piece
-    "Hey {first}...have you ever heard these words?",  # BNHA
-    "Can't a guy get a little sleep around here?",  # Kamina Falls – Gurren Lagann
-    "It's time someone put you in your place, {first}.",  # Hellsing
-    "Unit-01's reactivated..",  # Neon Genesis: Evangelion
-    "Prepare for trouble...And make it double",  # Pokemon
-    "Hey {first}, are You Challenging Me?",  # Shaggy
-    "Oh? You're Approaching Me?",  # jojo
-    "Ho… mukatta kuruno ka?",  # jojo jap ver
-    "I can't beat the shit out of you without getting closer",  # jojo
-    "Ho ho! Then come as close as you'd like.",  # jojo
-    "Hoho! Dewa juubun chikazukanai youi",  # jojo jap ver
-    "Guess who survived his time in Hell, {first}.",  # jojo
-    "How many loaves of bread have you eaten in your lifetime?",  # jojo
-    "What did you say? Depending on your answer, I may have to kick your ass!",  # jojo
-    "Oh? You're approaching me? Instead of running away, you come right to me? Even though your grandfather, Joseph, told you the secret of The World, like an exam student scrambling to finish the problems on an exam until the last moments before the chime?",  # jojo
-    "Rerorerorerorerorero.",  # jojo
+    "{first} just arrived. Diable Jamble!",
+    "{first} just arrived. Aschente!",
+    "{first} say Aschente to swear by the pledges.",
+    "{first} just joined. El Psy congroo!",
+    "Irasshaimase {first}!",
+    "Hi {first}, what is 1000-7?",
+    "Come. I don't want to destroy this place",
+    "I... am... Whitebeard!...wait..wrong anime.",
+    "Hey {first}...have you ever heard these words?",
+    "Can't a guy get a little sleep around here?",
+    "It's time someone put you in your place, {first}.",
+    "Unit-01's reactivated..",
+    "Prepare for trouble...And make it double",
+    "Hey {first}, are You Challenging Me?",
+    "Oh? You're Approaching Me?",
+    "Ho… mukatta kuruno ka?",
+    "I can't beat the shit out of you without getting closer",
+    "Ho ho! Then come as close as you'd like.",
+    "Hoho! Dewa juubun chikazukanai youi",
+    "Guess who survived his time in Hell, {first}.",
+    "How many loaves of bread have you eaten in your lifetime?",
+    "What did you say? Depending on your answer, I may have to kick your ass!",
+    "Oh? You're approaching me? Instead of running away, you come right to me? Even though your grandfather, Joseph, told you the secret of The World, like an exam student scrambling to finish the problems on an exam until the last moments before the chime?",
+    "Rerorerorerorerorero.",
     "{first} just warped into the group!",
     "I..it's..it's just {first}.",
     "Sugoi, Dekai. {first} Joined!",
-    "{first}, do you know gods of death love apples?",  # Death Note owo
-    "I'll take a potato chip.... and eat it",  # Death Note owo
-    "Oshiete oshiete yo sono shikumi wo!",  # Tokyo Ghoul
-    "Kaizoku ou ni...nvm wrong anime.",  # op
-    "{first} just joined! Gear.....second!",  # Op
+    "{first}, do you know gods of death love apples?",
+    "I'll take a potato chip.... and eat it",
+    "Oshiete oshiete yo sono shikumi wo!",
+    "Kaizoku ou ni...nvm wrong anime.",
+    "{first} just joined! Gear.....second!",
     "Omae wa mou....shindeiru",
-    "Hey {first}, the leaf village lotus blooms twice!",  # Naruto stuff begins from here
+    "Hey {first}, the leaf village lotus blooms twice!",
     "{first} Joined! Omote renge!",
     "{first}! I, Madara! declare you the strongest",
     "{first}, this time I'll lend you my power. ",  # Kyuubi to naruto
@@ -263,15 +235,14 @@ class Welcome(BASE):
     custom_content = Column(UnicodeText, default=None)
 
     custom_welcome = Column(
-        UnicodeText,
-        default=random.choice(DEFAULT_WELCOME_MESSAGES),
+        UnicodeText, default=random.choice(DEFAULT_WELCOME_MESSAGES)
     )
     welcome_type = Column(Integer, default=Types.TEXT.value)
 
     custom_leave = Column(UnicodeText, default=random.choice(DEFAULT_GOODBYE_MESSAGES))
     leave_type = Column(Integer, default=Types.TEXT.value)
 
-    clean_welcome = Column(Integer)
+    clean_welcome = Column(BigInteger)
 
     def __init__(self, chat_id, should_welcome=True, should_goodbye=True):
         self.chat_id = chat_id
@@ -280,8 +251,7 @@ class Welcome(BASE):
 
     def __repr__(self):
         return "<Chat {} should Welcome new users: {}>".format(
-            self.chat_id,
-            self.should_welcome,
+            self.chat_id, self.should_welcome
         )
 
 
@@ -327,7 +297,7 @@ class WelcomeMute(BASE):
 
 class WelcomeMuteUsers(BASE):
     __tablename__ = "human_checks"
-    user_id = Column(BigInteger, primary_key=True)
+    user_id = Column(Integer, primary_key=True)
     chat_id = Column(String(14), primary_key=True)
     human_check = Column(Boolean)
 
@@ -349,36 +319,18 @@ class CleanServiceSetting(BASE):
         return "<Chat used clean service ({})>".format(self.chat_id)
 
 
-class DefenseMode(BASE):
-    __tablename__ = "defense_mode"
-    chat_id = Column(String(14), primary_key=True)
-    status = Column(Boolean, default=False)
-    time = Column(Integer, default=21600)
-    acttime = Column(Integer, default=3600)
-    permanent = Column(Boolean, default=False)
-
-    def __init__(self, chat_id, status, time, acttime, permanent):
-        self.chat_id = str(chat_id)
-        self.status = status
-        self.time = time
-        self.acttime = acttime
-        self.permanent = permanent
-
-
 Welcome.__table__.create(checkfirst=True)
 WelcomeButtons.__table__.create(checkfirst=True)
 GoodbyeButtons.__table__.create(checkfirst=True)
 WelcomeMute.__table__.create(checkfirst=True)
 WelcomeMuteUsers.__table__.create(checkfirst=True)
 CleanServiceSetting.__table__.create(checkfirst=True)
-DefenseMode.__table__.create(checkfirst=True)
 
 INSERTION_LOCK = threading.RLock()
 WELC_BTN_LOCK = threading.RLock()
 LEAVE_BTN_LOCK = threading.RLock()
 WM_LOCK = threading.RLock()
 CS_LOCK = threading.RLock()
-DEFENSE_LOCK = threading.RLock()
 
 
 def welcome_mutes(chat_id):
@@ -447,8 +399,10 @@ def get_welc_pref(chat_id):
             welc.custom_content,
             welc.welcome_type,
         )
-    # Welcome by default.
-    return True, DEFAULT_WELCOME, None, Types.TEXT
+
+    else:
+        # Welcome by default.
+        return True, DEFAULT_WELCOME, None, Types.TEXT
 
 
 def get_gdbye_pref(chat_id):
@@ -456,8 +410,9 @@ def get_gdbye_pref(chat_id):
     SESSION.close()
     if welc:
         return welc.should_goodbye, welc.custom_leave, welc.leave_type
-    # Welcome by default.
-    return True, DEFAULT_GOODBYE, Types.TEXT
+    else:
+        # Welcome by default.
+        return True, DEFAULT_GOODBYE, Types.TEXT
 
 
 def set_clean_welcome(chat_id, clean_welcome):
@@ -507,11 +462,7 @@ def set_gdbye_preference(chat_id, should_goodbye):
 
 
 def set_custom_welcome(
-    chat_id,
-    custom_content,
-    custom_welcome,
-    welcome_type,
-    buttons=None,
+    chat_id, custom_content, custom_welcome, welcome_type, buttons=None
 ):
     if buttons is None:
         buttons = []
@@ -673,43 +624,3 @@ def migrate_chat(old_chat_id, new_chat_id):
                 btn.chat_id = str(new_chat_id)
 
         SESSION.commit()
-
-
-def getDefenseStatus(chat_id):
-    try:
-        stat = SESSION.query(DefenseMode).get(str(chat_id))
-        if stat:
-            return stat.status, stat.time, stat.acttime
-        return False, 21600, 3600  # default
-    finally:
-        SESSION.close()
-
-
-def setDefenseStatus(chat_id, status, time=21600, acttime=3600):
-    with DEFENSE_LOCK:
-        prevObj = SESSION.query(DefenseMode).get(str(chat_id))
-        perma = False
-        if prevObj:
-            perma = prevObj.permanent
-            SESSION.delete(prevObj)
-        newObj = DefenseMode(str(chat_id), status, time, acttime, perma or False)
-        SESSION.add(newObj)
-        SESSION.commit()
-
-
-def toggleDefenseStatus(chat_id):
-    newObj = True
-    with DEFENSE_LOCK:
-        prevObj = SESSION.query(DefenseMode).get(str(chat_id))
-        if prevObj:
-            newObj = not prevObj.status
-        stat = DefenseMode(
-            str(chat_id),
-            newObj,
-            prevObj.time or 21600,
-            prevObj.acttime or 3600,
-            prevObj.permanent or False,
-        )
-        SESSION.add(stat)
-        SESSION.commit()
-        return newObj
