@@ -457,7 +457,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
 *ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://t.me/MEOWXROBOT/6)
 
 
-{BOT_NAME} ᴍᴀᴅᴇ ʙʏ [ᴘɪʀᴏ](https:/t.me/EAGLE_BACK).
+{BOT_NAME} [ᴍɪᴛ ʟɪᴄᴇɴsᴇ](https://telegra.ph/%F0%9D%90%8C%F0%9D%90%88%F0%9D%90%93-%F0%9D%90%8B%F0%9D%90%88%F0%9D%90%82%F0%9D%90%84%F0%9D%90%8D%F0%9D%90%92%F0%9D%90%84-06-14).
 © 2022 - 2023 | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
 """,
             parse_mode=ParseMode.MARKDOWN,
