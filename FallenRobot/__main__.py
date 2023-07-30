@@ -71,17 +71,17 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """
+PM_START_IMG = """
 *ʜᴇʏ* {}, 🥀
 
 *๏ ᴛʜɪs ɪs* {} !
 ➻ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
-
 ➻**ᴍᴀᴅᴇ ʙʏ [ᴇᴀɢʟᴇ](tg://user?id=6272694477)**
 
 ➻**ᴊᴏɪɴ ᴏᴜʀ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/ODDRAGONS)**
 
-➻**ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛʜᴇɴ ᴊᴏɪɴ ᴏᴜʀ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ*
+➻**ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛʜᴇɴ ᴊᴏɪɴ ᴏᴜʀ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ**
+
 ──────────────────
 *๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
 """
@@ -97,12 +97,12 @@ buttons = [
         InlineKeyboardButton(text="🥀 ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs 🥀", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="❄️ ᴀʙᴏᴜᴛ ❄️", callback_data="fallen_"),
-        InlineKeyboardButton(text="🖤 sᴏᴜʀᴄᴇ 🖤", callback_data="source_"),
+        InlineKeyboardButton(text="❄ ᴀʙᴏᴜᴛ ❄", callback_data="fallen_"),
+        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text="😶‍🌫️ ᴅᴇᴠᴇʟᴏᴩᴇʀ 😶‍🌫️", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="💫 ᴅᴇᴠᴇʟᴏᴩᴇʀ 💫", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="🖤 sᴏᴜʀᴄᴇ 🖤", callback_data="source_"),
     ],
 ]
 
@@ -211,7 +211,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
-                "CAACAgQAAxkBAAJ9N2TF6akzAiocHh9x6RPb4nlWT1dSAALTDwACUOXgUWy-LtA4YOM7LwQ"
+                "CAACAgUAAxkBAAIUnWRw7NDuUHC2RuPhmNEHN-XlLGKLAAISDQACDLSJVzV0gUfJ8ariLwQ" 
             )
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
@@ -409,7 +409,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                             text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/Meow_X_Network/3"
+                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                     ],
                     [
@@ -418,7 +418,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                         ),
                         InlineKeyboardButton(
                             text="ɢɪᴛʜᴜʙ",
-                            url="https://t.me/Meow_X_Network/3",
+                            url="https://t.me/Meow_X_Network/6",
                         ),
                     ],
                     [
@@ -454,10 +454,10 @@ def Source_about_callback(update: Update, context: CallbackContext):
 ᴀɴᴅ ᴜsɪɴɢ [sǫʟᴀʟᴄʜᴇᴍʏ](https://www.sqlalchemy.org) ᴀɴᴅ [ᴍᴏɴɢᴏ](https://cloud.mongodb.com) ᴀs ᴅᴀᴛᴀʙᴀsᴇ.
 
 
-*ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://t.me/MEOWXROBOT/6)
+*ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://t.me/Meow_X_Network/6)
 
 
-{BOT_NAME} [ᴍɪᴛ ʟɪᴄᴇɴsᴇ](https://telegra.ph/%F0%9D%90%8C%F0%9D%90%88%F0%9D%90%93-%F0%9D%90%8B%F0%9D%90%88%F0%9D%90%82%F0%9D%90%84%F0%9D%90%8D%F0%9D%90%92%F0%9D%90%84-06-14).
+{BOT_NAME} ᴍᴀᴅᴇ ʙʏ [ᴘɪʀᴏ](https:/t.me/EAGLE_BACK).
 © 2022 - 2023 | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
 """,
             parse_mode=ParseMode.MARKDOWN,
