@@ -76,12 +76,12 @@ PM_START_TEXT = """
 
 *๏ ᴛʜɪs ɪs* {} !
 ➻ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
+
 ➻**ᴍᴀᴅᴇ ʙʏ [ᴇᴀɢʟᴇ](tg://user?id=6272694477)**
 
 ➻**ᴊᴏɪɴ ᴏᴜʀ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/ODDRAGONS)**
 
-➻**ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛʜᴇɴ ᴊᴏɪɴ ᴏᴜʀ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ**
-
+➻**ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛʜᴇɴ ᴊᴏɪɴ ᴏᴜʀ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ*
 ──────────────────
 *๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
 """
@@ -97,12 +97,12 @@ buttons = [
         InlineKeyboardButton(text="🥀 ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs 🥀", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="❄ ᴀʙᴏᴜᴛ ❄", callback_data="fallen_"),
-        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="❄️ ᴀʙᴏᴜᴛ ❄️", callback_data="fallen_"),
+       
     ],
     [
-        InlineKeyboardButton(text="💫 ᴅᴇᴠᴇʟᴏᴩᴇʀ 💫", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="🖤 sᴏᴜʀᴄᴇ 🖤", callback_data="source_"),
+        InlineKeyboardButton(text="😶‍🌫️ ᴅᴇᴠᴇʟᴏᴩᴇʀ 😶‍🌫️", url=f"tg://user?id={OWNER_ID}"),
+        
     ],
 ]
 
@@ -211,7 +211,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
-                "CAACAgUAAxkBAAIUnWRw7NDuUHC2RuPhmNEHN-XlLGKLAAISDQACDLSJVzV0gUfJ8ariLwQ" 
+                "CAACAgQAAxkBAAJ9N2TF6akzAiocHh9x6RPb4nlWT1dSAALTDwACUOXgUWy-LtA4YOM7LwQ"
             )
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
@@ -409,7 +409,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                             text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/MEOWXROBOT/8"
+                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/Meow_X_Network/3"
                         ),
                     ],
                     [
@@ -418,7 +418,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                         ),
                         InlineKeyboardButton(
                             text="ɢɪᴛʜᴜʙ",
-                            url="https://t.me/MEOWXROBOT/",
+                            url="https://t.me/Meow_X_Network/3",
                         ),
                     ],
                     [
