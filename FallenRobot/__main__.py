@@ -91,8 +91,12 @@ buttons = [
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
         InlineKeyboardButton(text="ʜᴇʟᴩ", callback_data="help_back"),
+    [
+    ],
+        InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
 ]
+
 HELP_STRINGS = f"""
 *» {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
 
