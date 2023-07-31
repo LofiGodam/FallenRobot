@@ -73,8 +73,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_IMG = """
 *ʜᴇʏ* {}, 🥀
-
-*๏ ᴛʜɪs ɪs* {} !
+──────────────────
 ➻ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
 
 ➻**ᴍᴀᴅᴇ ʙʏ [ᴇᴀɢʟᴇ](tg://user?id=6271932803)**
@@ -205,7 +204,7 @@ def start(update: Update, context: CallbackContext):
                 "CAACAgUAAxkBAAIUnWRw7NDuUHC2RuPhmNEHN-XlLGKLAAISDQACDLSJVzV0gUfJ8ariLwQ" 
             )
             update.effective_message.reply_text(
-                PM_START_IMG.format(escape_markdown(first_name), BOT_NAME),
+                PM_START_IMG.format(escape_markdown(first_name), (START_IMG),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
