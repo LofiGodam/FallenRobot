@@ -87,10 +87,10 @@ PM_START_IMG = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="🍂 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🍂",
+            text="ᴀᴅᴅ ᴍᴇ",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
-        InlineKeyboardButton(text="🥀 ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs 🥀", callback_data="help_back"),
+        InlineKeyboardButton(text="ʜᴇʟᴩ", callback_data="help_back"),
     ],
 ]
 HELP_STRINGS = f"""
