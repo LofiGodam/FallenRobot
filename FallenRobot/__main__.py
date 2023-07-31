@@ -69,9 +69,12 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
 
     return ping_time
-
+PM_START_IMG = """
+🍷𝐖𝐞𝐥𝐜𝐨𝐦𝐞 `{}`, 🍷 
+"""
 
 PM_START_IMG = """
+
 *ʜᴇʏ* {}, 🥀
 
 *๏ ᴛʜɪs ɪs* {} !
@@ -209,7 +212,7 @@ def start(update: Update, context: CallbackContext):
             x.delete()
             usr = update.effective_user
             lol = update.effective_message.reply_text(
-                PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
+                PM_START_IMG.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0.4)
             lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠.")
