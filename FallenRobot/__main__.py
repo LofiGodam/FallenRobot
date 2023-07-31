@@ -69,17 +69,15 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
 
     return ping_time
-PM_START_IMG = """
-🍷𝐖𝐞𝐥𝐜𝐨𝐦𝐞 `{}`, 🍷 
-"""
+
 
 PM_START_IMG = """
-
 *ʜᴇʏ* {}, 🥀
 
 *๏ ᴛʜɪs ɪs* {} !
 ➻ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
-➻**ᴍᴀᴅᴇ ʙʏ [ᴇᴀɢʟᴇ](tg://user?id=6272694477)**
+
+➻**ᴍᴀᴅᴇ ʙʏ [ᴇᴀɢʟᴇ](tg://user?id=6271932803)*
 
 ➻**ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴛʜᴇɴ ᴊᴏɪɴ ᴏᴜʀ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ**
 ──────────────────
@@ -92,14 +90,12 @@ buttons = [
             text="ᴀᴅᴅ ᴍᴇ",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
-        
         InlineKeyboardButton(text="ʜᴇʟᴩ", callback_data="help_back"),
-    
-    
     ],
     [
         InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
-   
+        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"),
+
     ],
 ]
 
@@ -206,24 +202,11 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            x=update.effective_message.reply_sticker(
+            update.effective_message.reply_sticker(
                 "CAACAgUAAxkBAAIUnWRw7NDuUHC2RuPhmNEHN-XlLGKLAAISDQACDLSJVzV0gUfJ8ariLwQ" 
             )
-            x.delete()
-            usr = update.effective_user
-            lol = update.effective_message.reply_text(
-                PM_START_IMG.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
-            )
-            time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠.")
-            time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠..")
-            time.sleep(0.4)
-            lol.edit_text("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠... ")
-            time.sleep(0.4)
-            lol.delete()
             update.effective_message.reply_text(
-                PM_START_IMG.format(escape_markdown(first_name), BOT_NAME),
+                PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -418,7 +401,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                             text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/MEOWXROBOT/8"
+                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                     ],
                     [
@@ -427,7 +410,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                         ),
                         InlineKeyboardButton(
                             text="ɢɪᴛʜᴜʙ",
-                            url="https://t.me/MEOWXROBOT/",
+                            url="https://t.me/Meow_X_Network/6",
                         ),
                     ],
                     [
@@ -439,7 +422,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
     elif query.data == "fallen_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
-            PM_START_IMG.format(escape_markdown(first_name), BOT_NAME),
+            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
@@ -463,10 +446,10 @@ def Source_about_callback(update: Update, context: CallbackContext):
 ᴀɴᴅ ᴜsɪɴɢ [sǫʟᴀʟᴄʜᴇᴍʏ](https://www.sqlalchemy.org) ᴀɴᴅ [ᴍᴏɴɢᴏ](https://cloud.mongodb.com) ᴀs ᴅᴀᴛᴀʙᴀsᴇ.
 
 
-*ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://t.me/MEOWXROBOT/6)
+*ʜᴇʀᴇ ɪs ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ :* [ɢɪᴛʜᴜʙ](https://t.me/Meow_X_Network/6)
 
 
-{BOT_NAME} [ᴍɪᴛ ʟɪᴄᴇɴsᴇ](https://telegra.ph/%F0%9D%90%8C%F0%9D%90%88%F0%9D%90%93-%F0%9D%90%8B%F0%9D%90%88%F0%9D%90%82%F0%9D%90%84%F0%9D%90%8D%F0%9D%90%92%F0%9D%90%84-06-14).
+{BOT_NAME} ᴍᴀᴅᴇ ʙʏ [ᴘɪʀᴏ](https:/t.me/EAGLE_BACK).
 © 2022 - 2023 | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
 """,
             parse_mode=ParseMode.MARKDOWN,
@@ -478,7 +461,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     elif query.data == "source_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
-            PM_START_IMG.format(escape_markdown(first_name), BOT_NAME),
+            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
