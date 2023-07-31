@@ -203,7 +203,7 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_sticker(
+            x=update.effective_message.reply_sticker(
                 "CAACAgUAAxkBAAIUnWRw7NDuUHC2RuPhmNEHN-XlLGKLAAISDQACDLSJVzV0gUfJ8ariLwQ" 
             )
             x.delete()
