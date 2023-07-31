@@ -98,11 +98,11 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="❄ ᴀʙᴏᴜᴛ ❄", callback_data="fallen_"),
-        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="🖤 sᴏᴜʀᴄᴇ 🖤", callback_data="source_"),
     ],
     [
         InlineKeyboardButton(text="💫 ᴅᴇᴠᴇʟᴏᴩᴇʀ 💫", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="🖤 sᴏᴜʀᴄᴇ 🖤", callback_data="source_"),
+        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
 ]
 
@@ -111,7 +111,7 @@ HELP_STRINGS = f"""
 
 ➲ /start : ꜱᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ.
 ➲ /help  : ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜱᴇᴄᴛɪᴏɴ.
-➲ **ᴊᴏɪɴ ᴏᴜʀ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/ODDRAGONS).**
+➲ **ᴊᴏɪɴ ᴏᴜʀ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/ODDRAGONS)**
   ‣ ɪɴ ᴘᴍ : ᴡɪʟʟ ꜱᴇɴᴅ ʏᴏᴜ ʜᴇʟᴘ ꜰᴏʀ ᴀʟʟ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇꜱ.
   ‣ ɪɴ ɢʀᴏᴜᴘ : ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ʜᴇʟᴘ ᴍᴏᴅᴜʟᴇꜱ.""" 
 
