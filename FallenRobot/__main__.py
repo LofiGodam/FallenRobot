@@ -204,7 +204,7 @@ def start(update: Update, context: CallbackContext):
                 "CAACAgUAAxkBAAIUnWRw7NDuUHC2RuPhmNEHN-XlLGKLAAISDQACDLSJVzV0gUfJ8ariLwQ" 
             )
             update.effective_message.reply_text(
-                PM_START_IMG.format(escape_markdown(first_name), START_IMG),
+                PM_START_IMG.format(escape_markdown(first_name), (START_IMG), BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
