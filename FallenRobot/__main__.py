@@ -81,7 +81,7 @@ PM_START_IMG = """
 ╚═════════════════❍⊱❁۪۪
       ╔═════ஜ۩۞۩ஜ════╗
            
-           🇮🇳 ᴇᴀɢʟᴇ 🇮🇳
+        🇮🇳 ᴇᴀɢʟᴇ 🇮🇳
     
       ╚═════ஜ۩۞۩ஜ═════╝
 
@@ -431,7 +431,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
     elif query.data == "fallen_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
-            PM_START_IMG.format(escape_markdown(first_name), BOT_NAME),
+            PM_START_IMG.format(escape_markdown(first_name), (START_IMG), BOT_NAME),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
