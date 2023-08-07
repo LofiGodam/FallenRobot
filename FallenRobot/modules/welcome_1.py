@@ -5,8 +5,8 @@ from pyrogram import *
 from pyrogram.types import *
 from pyrogram.enums import *
 
-FallenRobot => YOUR BOTS FILE NAME
-from NAME import pbot
+FallenRobot =YOUR BOTS FILE NAME
+from FallenRobot import pbot
 
 #ADD ANY BUTTON YOU WANT BELOW YOUR WELCOME IMAGE
 markup=InlineKeyboardMarkup ([[InlineKeyboardButton ("MODS", url="https://t.me/EAGLE_BACK")]])
