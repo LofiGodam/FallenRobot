@@ -92,15 +92,13 @@ PM_START_IMG = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ",
+            text="✯ 𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣 ✯",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
-    
-       InlineKeyboardButton(text="ʜᴇʟᴩ", callback_data="help_back"),
     ],
     [
-       InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
-       InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"),
+       InlineKeyboardButton(text="˹𝗛𝗘𝗟𝗣˼", callback_data="help_back"),
+       InlineKeyboardButton(text="♡ 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 ♡", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
 ]
 HELP_STRINGS = f"""
