@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from pyrogram import Client, filters
-from Hiroko import Hiroko
+from FallenRobot import FallenRobot
 
 
 get_font = lambda font_size, font_path: ImageFont.truetype(font_path, font_size)
