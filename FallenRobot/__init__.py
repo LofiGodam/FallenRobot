@@ -7,6 +7,7 @@ import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
 from telethon import TelegramClient
+from os import environ, getenv, listdir, path
 from FallenRobot.quotstuff.quotapi import Quotly
 
 StartTime = time.time()
