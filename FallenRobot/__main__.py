@@ -219,15 +219,7 @@ def start(update: Update, context: CallbackContext):
             caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
                 uptime
             ),
-            buttons =[
-                 [
-           
-             InlineKeyboardButton(
-                 text="✯ 𝗔𝗗𝗗 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣 ✯",
-                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-        ),
-                 ],
-            ]
+            
             parse_mode=ParseMode.HTML,
         )
 
