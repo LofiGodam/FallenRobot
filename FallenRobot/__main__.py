@@ -219,7 +219,7 @@ def start(update: Update, context: CallbackContext):
             caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
                 uptime
             ),
-            buttons = [
+            buttons = [,
                  [
            
              InlineKeyboardButton(
