@@ -68,7 +68,10 @@ def get_readable_time(seconds: int) -> str:
     time_list.reverse()
     ping_time += ":".join(time_list)
 
-    return ping_time
+    return ping_tim
+PM_START_TEX = """
+🍷𝐖𝐞𝐥𝐜𝐨𝐦𝐞 `{}`, 🍷 
+"""
 
 
 PM_START_IMG = """
@@ -205,7 +208,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
-                "CAACAgUAAxkBAAIUnWRw7NDuUHC2RuPhmNEHN-XlLGKLAAISDQACDLSJVzV0gUfJ8ariLwQ" 
+                "CAACAgUAAxkBAANPZPAkzpG94QRevskzeqbD-ZC_qlAAAqoHAAJksMhVrdaMr9IWn9AwBA" 
             )
             update.effective_message.reply_text(
                 PM_START_IMG.format(escape_markdown(first_name), (START_IMG), BOT_NAME),
