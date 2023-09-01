@@ -14,7 +14,7 @@ openai.api_key = "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"
 
 
 
-@Fallen.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
+@FallenRobot.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
     try:
@@ -38,7 +38,7 @@ async def chat(bot, message):
 
 """
    
-@Fallen.on_message(filters.command("bard"))
+@FallenRobot.on_message(filters.command("bard"))
 async def bard_bot(bot, message):
     try:
         start_time = time.time()
@@ -57,7 +57,7 @@ async def bard_bot(bot, message):
 
 """
 
-@Fallen.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
+@FallenRobot.on_message(filters.command(["image","photo","img","generate"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"] ))
 async def chat(bot, message):
     try:
         start_time = time.time()
