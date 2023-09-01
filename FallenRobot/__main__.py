@@ -104,8 +104,8 @@ buttons = [
        InlineKeyboardButton(text="♡ 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 ♡", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-       InlineKeyboardButton(text="♡ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 ♡", url=f"https://t.me/{SUPPORT_CHANNEL}"),
-    ],
+       InlineKeyboardButton(text="✘ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 ✘", url=f"https://t.me/{SUPPORT_CHANNEL}"),
+    
     ],
 ]
 HELP_STRINGS = f"""
