@@ -17,7 +17,9 @@ class Config(object):
     START_IMG = "https://te.legra.ph/file/40eb1ed850cdea274693e.jpg"
 
     SUPPORT_CHAT = "ODDRAGONS"  # Your Telegram support group chat username where your users will go and bother you
-
+ 
+    SUPPORT_CHANNEL = "DragonaboutDpz"  # Your Telegram Support Channel
+    
     TOKEN = ""  # Get bot token from @BotFather on Telegram
 
     TIME_API_KEY = ""  # Get this value from https://timezonedb.com/api
