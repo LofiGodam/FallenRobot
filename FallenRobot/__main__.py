@@ -103,6 +103,9 @@ buttons = [
        InlineKeyboardButton(text="˹𝗛𝗘𝗟𝗣˼", callback_data="help_back"),
        InlineKeyboardButton(text="♡ 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 ♡", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
+    [
+       InlineKeyboardButton(text="♡ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 ♡", url=f"https://t.me/DragonaboutDpz"),
+    ],
 ]
 HELP_STRINGS = f"""
 *» {BOT_NAME} ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*
