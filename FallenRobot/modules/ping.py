@@ -5,7 +5,14 @@ from telegram.ext import CallbackContext, run_async
 
 from FallenRobot import StartTime, dispatcher
 from FallenRobot.modules.disable import DisableAbleCommandHandler
+# ------------------------------------------------------------------------------- #
 
+
+photo = [
+"https://graph.org/file/0cfd1c528a564f0046922.jpg"
+]
+
+# ------------------------------------------------------------------------------- #
 
 def get_readable_time(seconds: int) -> str:
     count = 0
