@@ -104,7 +104,7 @@ buttons = [
        InlineKeyboardButton(text="♡ 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 ♡", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-       InlineKeyboardButton(text="♡ 𝗥𝗘𝗣𝗢 ♡", sticker_id=f"CAACAgUAAxkBAAIDNmUQRgeZopd_zx_LE-TMPWS8AYyoAALrCAACOleJVlIslWcQZfmyMAQ", callback_data="repo_back"),
+       InlineKeyboardButton(text="♡ 𝗥𝗘𝗣𝗢 ♡", sticker_id="CAACAgUAAxkBAAIDNmUQRgeZopd_zx_LE-TMPWS8AYyoAALrCAACOleJVlIslWcQZfmyMAQ", callback_data="repo_back"),
     ],
 ]
 HELP_STRINGS = f"""
