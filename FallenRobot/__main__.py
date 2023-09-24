@@ -104,7 +104,7 @@ buttons = [
        InlineKeyboardButton(text="♡ 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 ♡", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [
-       InlineKeyboardButton(text="♡ 𝗥𝗘𝗣𝗢 ♡", url=f"https://te.legra.ph/file/f9d917ef57f9376d8648e.mp4", callback_data="repo_back"),
+       InlineKeyboardButton(text="♡ 𝗥𝗘𝗣𝗢 ♡", callback_data= url=f"https://te.legra.ph/file/f9d917ef57f9376d8648e.mp4",text="◁","help_back"),
     ],
 ]
 HELP_STRINGS = f"""
